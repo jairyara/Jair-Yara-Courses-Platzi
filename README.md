@@ -1,2 +1,2 @@
-# Programaci-n-B-sica-Platzi-Jair-Yara
+# Jair-Yara-Platzi-Courses
 Todos los trabajos realizados de los cursos de Platzi
