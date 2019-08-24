@@ -1,2 +1,2 @@
-# Jair-Yara-Platzi-Courses
-Todos los trabajos realizados de los cursos de Platzi
+Programación básica Platzi Course
+Todos los trabajos realizados del curso Programación básica en Platzi
