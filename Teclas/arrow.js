@@ -10,8 +10,16 @@ var square = document.getElementById("area");
 var paper = square.getContext("2d");
 var x = 250;
 var y = 250;
+var xf = 0;
+var yf = 0;
+var state = false;
 
-drawLine("red", 249, 251, 249, 251, paper);
+
+document.addEventListener("mouseup", disabled);
+document.addEventListener("mousedown", activated);
+document.addEventListener("mousemove", drawing);
+
+
 
 function drawLine(color, xi, yi, xf, yf, canva) {
     canva.beginPath();
@@ -22,6 +30,33 @@ function drawLine(color, xi, yi, xf, yf, canva) {
     canva.stroke();
     canva.closePath();
 }
+
+
+function drawing(event) {
+    if(state) {
+        xf = event.offsetX;
+        yf = event.offsetY;
+        drawLine("green", x, y, xf, yf, paper);
+        if (event.srcElement.id != "area") {
+            state = false;
+        }
+        x = xf;
+        y = yf;
+    }
+}
+
+function activated(event) {
+    if (event.srcElement.id == "area"){
+        x = event.offsetX;
+        y = event.offsetY;
+        state = true;
+    }
+}
+
+function disabled(event) {
+    state = false;
+}
+
 
 function drawKeyboard(event) {
     var lineColor = "blue";
