@@ -1,2 +1,2 @@
-Programación básica Platzi Course
-Todos los trabajos realizados del curso Programación básica en Platzi
+Basic development Platzi Course
+All works elaborate at basic development course Platzi
