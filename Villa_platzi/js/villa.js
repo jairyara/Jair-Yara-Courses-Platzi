@@ -1,20 +1,20 @@
-var vp = document.getElementById("villaPlatzi");
-var paper = vp.getContext("2d");
-var map = "tile.png";
+let vp = document.getElementById("villaPlatzi");
+let paper = vp.getContext("2d");
+let map = "tile.png";
 
-var imageBackground = new Image();
+let imageBackground = new Image();
 imageBackground.src = map;
 imageBackground.addEventListener("load", draw);
 
-var cow = new Image();
+let cow = new Image();
 cow.src = "vaca.png";
 cow.addEventListener("load", drawCow);
 
-var pig = new Image();
+let pig = new Image();
 pig.src = "cerdo.png";
 pig.addEventListener("load", drawPig);
 
-var chicken = new Image();
+let chicken = new Image();
 chicken.src = "pollo.png";
 chicken.addEventListener("load", drawChicken);
 

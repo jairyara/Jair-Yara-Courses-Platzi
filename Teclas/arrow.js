@@ -1,4 +1,4 @@
-var key = {
+let key = {
     UP: 38,
     DOWN: 40,
     LEFT: 37,
@@ -6,13 +6,13 @@ var key = {
 };
 
 document.addEventListener("keyup", drawKeyboard);
-var square = document.getElementById("area");
-var paper = square.getContext("2d");
-var x = 250;
-var y = 250;
-var xf = 0;
-var yf = 0;
-var state = false;
+let square = document.getElementById("area");
+let paper = square.getContext("2d");
+let x = 250;
+let y = 250;
+let xf = 0;
+let yf = 0;
+let state = false;
 
 
 document.addEventListener("mouseup", disabled);
@@ -33,7 +33,7 @@ function drawLine(color, xi, yi, xf, yf, canva) {
 
 
 function drawing(event) {
-    if(state) {
+    if (state) {
         xf = event.offsetX;
         yf = event.offsetY;
         drawLine("green", x, y, xf, yf, paper);
@@ -46,7 +46,7 @@ function drawing(event) {
 }
 
 function activated(event) {
-    if (event.srcElement.id == "area"){
+    if (event.srcElement.id == "area") {
         x = event.offsetX;
         y = event.offsetY;
         state = true;
@@ -59,8 +59,8 @@ function disabled(event) {
 
 
 function drawKeyboard(event) {
-    var lineColor = "blue";
-    var move = 10;
+    let lineColor = "blue";
+    let move = 10;
     switch (event.keyCode) {
         case key.UP:
             drawLine(lineColor, x, y, x, y - move, paper);

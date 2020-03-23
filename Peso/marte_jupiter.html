@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Tu no eres gordo, estás en el planeta equivocado</title>
+    <meta charset="utf-8">
+    <title>Tu no eres gordo, estás en el planeta equivocado</title>
 </head>
+
 <body>
-	<h1>Tu peso en otro planeta</h1>
-	<p>En la tierra pesas distinto que en Marte o Jupiter</p>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la tierra pesas distinto que en Marte o Jupiter</p>
 
-	<script type="text/javascript">
-		var user = prompt("Ingresa tu masa corporal?");
-		var planet = prompt("Elige un planeta.\n Marte o Jupiter");
-		var peso = parseFloat(user);
-		var g_tierra = 9.8;
-		var g_marte = 3.7;
-		var g_jupiter = 24.8;
-		var peso_final;
-		if (planet == "Marte" || planet =="marte" || planet == "MARTE") {
-			planet ="Marte";
-			peso_final = peso * g_marte / g_tierra;		
-		}
+    <script type="text/javascript">
+        let user = prompt("Ingresa tu masa corporal?");
+        let planet = prompt("Elige un planeta.\n Marte o Jupiter");
+        let peso = parseFloat(user);
+        let g_tierra = 9.8;
+        let g_marte = 3.7;
+        let g_jupiter = 24.8;
+        let peso_final;
+        if (planet == "Marte" || planet == "marte" || planet == "MARTE") {
+            planet = "Marte";
+            peso_final = peso * g_marte / g_tierra;
+        } else if (planet == "Jupiter" || planet == "jupiter" || planet == "JUPITER") {
+            planet = "Jupiter";
+            peso_final = peso * g_jupiter / g_tierra;
+        } else {
+            planet = "Krypton";
+            peso_final = 100000000
+            document.write("Estás gordito troll. ");
+        }
 
-		else if(planet == "Jupiter" || planet == "jupiter" || planet == "JUPITER"){
-			planet ="Jupiter";
-			peso_final = peso * g_jupiter / g_tierra;
-		}
-
-		else {
-			planet ="Krypton";
-			peso_final = 100000000
-			document.write("Estás gordito troll. ");
-		}
-		
-		peso_final = peso_final.toFixed(2);
-		document.write("Tu peso en " + planet + " es <strong> " + peso_final + " kilogramos </strong>");
-
-	</script>
+        peso_final = peso_final.toFixed(2);
+        document.write("Tu peso en " + planet + " es <strong> " + peso_final + " kilogramos </strong>");
+    </script>
 </body>
+
 </html>
